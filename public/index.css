@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.container {
+  height: 400px;
+  width: 800px;
+  border: solid 1px black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#username-display {
+  font-weight: 500;
+}
+
+#socket-id-display {
+  color: green;
+}

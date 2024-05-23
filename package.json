@@ -1,0 +1,17 @@
+{
+  "name": "socketio-simple-message",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "your name",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev main.ts"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script
+      src="https://cdn.socket.io/4.7.5/socket.io.min.js"
+      integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1>Hello user <span id="username-display"></span></h1>
+        <h2>
+          You have connected to server!
+          <br />
+          Your socket id is <span id="socket-id-display"></span>
+        </h2>
+
+        <div>
+          <h3>Current online users:</h3>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th>username</th>
+                  <th>socketId</th>
+                </tr>
+              </thead>
+              <tbody id="online-users-list">
+                <tr>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="dashboard.js"></script>
+    <script src="socket-client.js"></script>
+  </body>
+</html>
