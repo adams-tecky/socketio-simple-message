@@ -6,14 +6,27 @@ const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer);
 
-let onlineUserList: any = {
-  fake: 1234,
-};
+let onlineUserList: any = {};
 
 io.on("connection", (socket) => {
   console.log("connected", socket.id, socket.handshake.query.username);
+
   onlineUserList[`${socket.handshake.query.username}`] = socket.id;
-  socket.emit("onlineUserList", onlineUserList);
+  //  server emit online users to all connected client
+  io.emit("onlineUserList", onlineUserList);
+
+  // client's socket on message event
+  socket.on("message", (data) => {
+    console.log(data);
+
+    // TODO: backup message data into database
+    //
+
+    // server relay data to receiver's socket
+    io.to(onlineUserList[data.reciver]).emit("message", data);
+  });
+
+  // TODO: on client socket disconnect,remove records in onlineUserList
 });
 
 app.use(express.static("public"));

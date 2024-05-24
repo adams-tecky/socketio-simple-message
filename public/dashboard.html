@@ -12,36 +12,41 @@
     ></script>
   </head>
   <body>
-    <div class="container">
-      <div>
-        <h1>Hello user <span id="username-display"></span></h1>
-        <h2>
-          You have connected to server!
-          <br />
-          Your socket id is <span id="socket-id-display"></span>
-        </h2>
-
+    <div>
+      <div class="container">
         <div>
-          <h3>Current online users:</h3>
+          <h1>Hello user <span id="username-display"></span></h1>
+          <h2>
+            You have connected to server!
+            <br />
+            Your socket id is <span id="socket-id-display"></span>
+          </h2>
+
           <div>
-            <table>
-              <thead>
-                <tr>
-                  <th>username</th>
-                  <th>socketId</th>
-                </tr>
-              </thead>
-              <tbody id="online-users-list">
-                <tr>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
+            <h3>Current online users:</h3>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>username</th>
+                    <th>socketId</th>
+                  </tr>
+                </thead>
+                <tbody id="online-users-list">
+                  <tr>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
+      <br />
+      <div id="chatbox"></div>
     </div>
+
     <script src="dashboard.js"></script>
     <script src="socket-client.js"></script>
   </body>

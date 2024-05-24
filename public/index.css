@@ -6,7 +6,7 @@ body {
 
 .container {
   height: 400px;
-  width: 800px;
+  width: 600px;
   border: solid 1px black;
 
   display: flex;
@@ -20,4 +20,73 @@ body {
 
 #socket-id-display {
   color: green;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#target-username-display {
+  box-sizing: border-box;
+  width: 600px;
+  height: 45px;
+  background-color: gainsboro;
+  font-size: 24px;
+  padding: 5px;
+}
+
+#messages-display {
+  width: 600px;
+  height: 300px;
+  background-color: beige;
+  position: relative;
+}
+
+#input-container {
+  width: 600px;
+  height: 53px;
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#input-container > input {
+  height: 30px;
+  width: 500px;
+  margin-right: 10px;
+}
+
+.message-container {
+  width: 100%;
+  display: flex;
+}
+
+.outgoing {
+  flex-direction: row-reverse;
+}
+
+.message {
+  width: fit-content;
+}
+
+.outgoing > .message {
+  background-color: aquamarine;
+}
+
+.incoming > .message {
+  background-color: white;
 }
